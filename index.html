@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اوقات الصلاة</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        .custom-primary{
+            background-color:#064E3B;
+        }
+        .secondary{
+            background-color:#002117 ;
+        }
+        .yellow{
+            color: #FFDEA5;
+        }
+
+        .prayer-table{
+            color:#FFDEA5;
+            background-color:#064E3B;
+        }
+
+        .prayer-table th{
+            background-color:#002117 !important;
+            color:#FFDEA5 !important;
+        }
+
+        .prayer-table td{
+            background-color:#064E3B !important;
+            color:white !important;
+        }
+    </style>
+</head>
+
+<body class="custom-primary p-3">
+
+<!-- address -->
+<div class="container secondary text-white border rounded-5 shadow-lg p-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center yellow">اوقات الصلاة</h1>
+        </div>
+    </div>
+</div>
+
+<!-- city + next pray + local time-->
+<div class="container-fluid yellow p-3 mt-3">
+    <div class="row justify-content-center">
+
+        <div class="col col-md-3 text-center secondary border rounded-5 shadow-lg p-2 m-3">
+            <h4 id="city-name">---</h4>
+            <h6>المدينة</h6>
+        </div>
+
+        <div class="col col-md-3 text-center secondary border rounded-5 shadow-lg p-2 m-3">
+            <h4 id="next-prayer">---</h4>
+            <h6>الصلاة القادمة</h6>
+        </div>
+
+        <div class="col col-md-3 text-center secondary border rounded-5 shadow-lg p-2 m-3">
+            <h4 id="current-time">---</h4>
+            <h6>الوقت الآن</h6>
+        </div>
+
+    </div>
+</div>
+
+<!-- أوقات الصلاة + العد التنازلي -->
+<div class="container secondary yellow p-3 border rounded-3 shadow-lg">
+
+    <div class="row">
+
+        <div class="col text-center custom-primary border rounded-5 shadow-lg p-2 m-3">
+            <h6>الفجر</h6>
+            <h4 id="fajr">---</h4>
+        </div>
+
+        <div class="col text-center custom-primary border rounded-5 shadow-lg p-2 m-3">
+            <h6>الوقت المتبقي</h6>
+            <h4 id="remaining-time">---</h4>
+        </div>
+
+    </div>
+
+    <!-- الجدول -->
+    <div class="row">
+        <div class="col">
+
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered text-center prayer-table">
+
+                    <thead>
+                        <tr>
+                            <th>اليوم</th>
+                            <th>الفجر</th>
+                            <th>الشروق</th>
+                            <th>الظهر</th>
+                            <th>العصر</th>
+                            <th>المغرب</th>
+                            <th>العشاء</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <h>السبت</h>
+                                <h6>09/05/2026</h6>
+                            </td>
+                            <td id="t_fajr">---</td>
+                            <td id="t_sunrise">---</td>
+                            <td id="t_dhuhr">---</td>
+                            <td id="t_asr">---</td>
+                            <td id="t_maghrib">---</td>
+                            <td id="t_isha">---</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- ================= JS ================= -->
+
+<script src="functionality.js"></script>
+</body>
+</html>
