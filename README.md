@@ -17,3 +17,7 @@ A JavaScript application that displays daily prayer times based on the user's lo
 - Axios
 - Bootstrap
 - AlAdhan API
+
+## Screenshot
+
+![Prayer Times App](./public/screenshots/home.png)
